@@ -1,0 +1,4 @@
+{
+  "ext": "js,json,hbs,html",
+  "ignore": ["public/*", "build.js"]
+}

@@ -1,0 +1,29 @@
+{
+  "name": "k-space",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "===== DEV =====": "",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon --env-file=.env.dev index.js ",
+    "===== BUILD SCRIPTS =====": "",
+    "build": "node utils/build.js",
+    "build:css": "npx tailwindcss -i ./public/css/styles.css -o ./public/css/tailwind.css --minify",
+    "===== PROD =====": "",
+    "start": "node --env-file=.env.prod index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/hapi": "^21.3.10",
+    "@hapi/hoek": "^11.0.4",
+    "@hapi/inert": "^7.1.0",
+    "@hapi/vision": "^7.0.3",
+    "handlebars": "^4.7.8",
+    "nodemon": "^3.1.7"
+  },
+  "devDependencies": {
+    "terser": "^5.36.0"
+  }
+}

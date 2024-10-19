@@ -1,0 +1,6 @@
+public/styles/tailwind.css
+public/js/
+.env.local
+.env.dev
+.env.prod
+node_modules
