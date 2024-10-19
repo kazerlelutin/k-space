@@ -16,7 +16,7 @@ function build() {
     console.log('📏 CSS minifié')
   })
 
-  const dirPath = path.join(process.cwd(), 'scripts')
+  const dirPath = path.join(process.cwd(), 'src', 'scripts')
 
   const minifyFile = (file) => {
     const filePath = path.join(dirPath, file)
