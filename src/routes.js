@@ -32,10 +32,11 @@ const routes = [
     method: '*',
     path: '/{any*}',
     handler: function (_req, h) {
+      const lang = _req.path.split('/')[1]
       return h.view('404', {
         layout: 'default',
         urn: '404',
-        lang: 'en',
+        lang,
       })
     },
   },
