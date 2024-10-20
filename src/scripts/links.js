@@ -23,9 +23,7 @@ function handleLinks() {
 
         // Remplacer le title
         const newTitle = doc.querySelector('title')?.textContent
-        if (newTitle) {
-          document.title = newTitle
-        }
+        if (newTitle) document.title = newTitle
 
         // Remettre à jour l'historique
         history.pushState({}, '', url)
@@ -33,7 +31,7 @@ function handleLinks() {
         handleLinks()
       } catch (error) {
         // Afficher une page d'erreur personnalisée
-        document.body.innerHTML = '<h1>Page non trouvée</h1>'
+        window.location.href = '/404'
         console.error('Erreur de navigation:', error)
       }
     })

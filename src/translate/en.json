@@ -1,4 +1,12 @@
 {
-  "title": "Title",
-  "buy me a coffee": "Buy me a coffee"
+  "home": "Home",
+  "buy me a coffee": "Buy me a coffee",
+  "learn korean": "Learn Korean",
+  "not found": "Not Found",
+  "page not found": "Page not found",
+  "dashboard": "Dashboard",
+  "lesson": "Lesson",
+  "lesson_plural": "Lessons",
+  "revision": "Revision",
+  "librairie": "Librairie"
 }

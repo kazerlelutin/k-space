@@ -19,6 +19,28 @@ const routes = [
   },
   {
     method: 'GET',
+    path: '/service-worker.js',
+    handler: function (_req, h) {
+      return h.file(`/public/js/service-worker.js`)
+    },
+    options: {
+      cache,
+    },
+  },
+  {
+    // === 404 ===
+    method: '*',
+    path: '/{any*}',
+    handler: function (_req, h) {
+      return h.view('404', {
+        layout: 'default',
+        urn: '404',
+        lang: 'en',
+      })
+    },
+  },
+  {
+    method: 'GET',
     path: '/',
     handler: function (_req, h) {
       return h.redirect('/fr')
@@ -31,13 +53,13 @@ const routes = [
   },
   {
     method: 'GET',
-    path: '/{lang}/test',
-    handler: function (request, h) {
-      return h.view('test', {
-        layout: 'default',
-        lang: request.params.lang,
-      })
-    },
+    path: '/{lang}/learn-kr',
+    handler: require('./handlers/index'),
+  },
+  {
+    method: 'GET',
+    path: '/{lang}/learn-kr/dashboard',
+    handler: require('./handlers/index'),
   },
 ]
 

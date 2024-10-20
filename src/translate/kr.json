@@ -1,4 +1,11 @@
 {
-  "title": "제목",
-  "buy me a coffee": "커피 사주세요"
+  "home": "홈",
+  "buy me a coffee": "커피 사주세요",
+  "learn korean": "한국어 배우기",
+  "not found": "찾을 수 없음",
+  "dashboard": "대시보드",
+  "lesson": "레슨",
+  "lesson_plural": "레슨",
+  "revision": "복습",
+  "librairie": "서재"
 }

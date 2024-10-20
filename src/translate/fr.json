@@ -1,4 +1,11 @@
 {
-  "title": "Titre",
-  "buy me a coffee": "Offrez-moi un café"
+  "home": "Accueil",
+  "buy me a coffee": "Offrez-moi un café",
+  "learn korean": "Apprendre le coréen",
+  "not found": "Non trouvé",
+  "dashboard": "Tableau de bord",
+  "lesson": "Leçon",
+  "lesson_plural": "Leçons",
+  "revision": "Révision",
+  "librairie": "Librairie"
 }
