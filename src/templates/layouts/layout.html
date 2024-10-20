@@ -1,15 +1,21 @@
-<html>
-
-<head>
+<html class="dark">
+  <head>
     <link href="/public/css/tailwind.css" rel="stylesheet" />
+    <link rel="icon" type="image/icon" href="/public/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     {{{metas}}}
-</head>
+  </head>
 
-<body>
-    <main>
-        <div>LAYOUT</div>
-        {{{content}}}
-    </main>
-    {{link}}
-</body>
+  <body
+    class="bg-sepia-200 text-sepia-grey_four group h-full grid grid-rows-[auto_1fr]"
+  >
+    {{> header}}
+
+    <div class="grid grid-cols-[auto_1fr] h-full">
+      {{> menu}}
+      <main class="p-2">{{{content}}}</main>
+    </div>
+  </body>
+  <script src="/public/js/links.min.js" defer></script>
+  <script src="/public/js/hamburger.min.js" defer></script>
+</html>

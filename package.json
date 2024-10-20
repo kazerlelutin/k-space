@@ -9,7 +9,7 @@
     "test": "lab",
     "===== BUILD SCRIPTS =====": "",
     "build": "node utils/build.js",
-    "build:css": "npx tailwindcss -i ./public/css/styles.css -o ./public/css/tailwind.css --minify",
+    "build:css": "npx tailwindcss -i ./src/public/css/styles.css -o ./src/public/css/tailwind.css --minify",
     "===== PROD =====": "",
     "start": "node --env-file=.env.prod index.js"
   },

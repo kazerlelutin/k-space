@@ -1,4 +1,4 @@
-addEventListener('DOMContentLoaded', () => {
+function handleLinks() {
   const links = document.querySelectorAll('[data-link]')
 
   links.forEach((link) => {
@@ -12,20 +12,34 @@ addEventListener('DOMContentLoaded', () => {
           throw new Error(`Erreur ${response.status}: ${response.statusText}`)
 
         const data = await response.text()
-        //TODO faire un appe spécifique pour remplacer le contenu genre
-        /*
 
-        reponse =
-        {
-        header: 'header',}
-        */
+        // Créer un document temporaire pour analyser la réponse HTML
+        const parser = new DOMParser()
+        const doc = parser.parseFromString(data, 'text/html')
+
+        // Remplacer uniquement le body
+        const newBody = doc.querySelector('body')
+        document.body.replaceWith(newBody)
+
+        // Remplacer le title
+        const newTitle = doc.querySelector('title')?.textContent
+        if (newTitle) {
+          document.title = newTitle
+        }
+
+        // Remettre à jour l'historique
         history.pushState({}, '', url)
-        document.body.innerHTML = data
+
+        handleLinks()
       } catch (error) {
-        //TODO call a template
+        // Afficher une page d'erreur personnalisée
         document.body.innerHTML = '<h1>Page non trouvée</h1>'
         console.error('Erreur de navigation:', error)
       }
     })
   })
-})
+}
+
+// Recharger les listeners sur DOMContentLoaded et popstate
+addEventListener('DOMContentLoaded', handleLinks)
+addEventListener('popstate', handleLinks)

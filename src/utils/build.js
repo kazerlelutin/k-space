@@ -22,6 +22,7 @@ function build() {
     const filePath = path.join(dirPath, file)
     const outputFilePath = path.join(
       process.cwd(),
+      'src',
       'public',
       'js',
       file.replace('.js', '.min.js')

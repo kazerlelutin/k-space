@@ -31,10 +31,11 @@ const routes = [
   },
   {
     method: 'GET',
-    path: '/test',
+    path: '/{lang}/test',
     handler: function (request, h) {
       return h.view('test', {
         layout: 'default',
+        lang: request.params.lang,
       })
     },
   },

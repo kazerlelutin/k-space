@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./templates/**/*.html'],
+  content: ['./src/templates/**/*.html'],
+  darkMode: 'class',
   theme: {
     extend: {
       fontFamily: {
@@ -9,6 +10,19 @@ module.exports = {
         mono: ['Inter', 'sans-serif'],
       },
       colors: {
+        sepia: {
+          100: '#c09771',
+          200: '#a87f5a',
+          300: '#956f4c',
+          400: '#6f4b2c',
+          500: '#301d0d',
+          grey_one: '#ffffff',
+          grey_two: '#bcb9b9',
+          grey_three: '#908e8e',
+          grey_four: '#000000',
+          blood_one: '#9a1313',
+          blood_two: '#570808',
+        },
         rd: {
           bg: 'var(--color-bg)',
           text: 'var(--color-text)',
